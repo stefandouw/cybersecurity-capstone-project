@@ -1,0 +1,14 @@
+<div class="content-container">
+  <h1>My Inbox</h1>
+  <button routerLink="/send-message" routerLinkActive="active">Send New Message</button>
+  <h4>My Messages</h4>
+  <ul>
+    <li class="pointer" *ngFor="let message of messages" [textContent]="'Message from ' + message.sender"
+        (click)="setMessageActive(message)"></li>
+  </ul>
+  <h4>Message content:</h4>
+  <p *ngIf="activeMessage" [textContent]="activeMessage"></p>
+  <div class="back-button-container">
+  <button routerLink="/home" routerLinkActive="active">Back to home</button>
+  </div>
+</div>

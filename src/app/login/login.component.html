@@ -1,0 +1,12 @@
+<div class="content-container">
+  <h1>Login</h1>
+  <p [textContent]="loginMessage"></p>
+  <div class="input-container">
+    <input #usernameInput type="text"><p>Username</p>
+  </div>
+  <div class="input-container">
+    <input #passwordInput type="password"><p>Password</p>
+  </div>
+  <button routerLink="/forgot-password" routerLinkActive="active">Forgot your password?</button>
+  <button (click)="validateLogin(usernameInput.value, passwordInput.value)">Login</button>
+</div>

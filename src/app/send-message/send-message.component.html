@@ -1,0 +1,14 @@
+<div class="content-container">
+  <h1>Send New Message</h1>
+  <p [textContent]="sendingResultMessage"></p>
+  <div class="input-container">
+    <input #usernameInput type="text"><p>To (username)</p>
+  </div>
+  <div class="input-container">
+    <input #messageContent type="text"><p>Message content</p>
+  </div>
+  <div class="input-container">
+    <button (click)="sendMessage(usernameInput.value, messageContent.value)">Send message</button>
+    <button routerLink="/inbox" routerLinkActive="active">Back to inbox</button>
+  </div>
+</div>

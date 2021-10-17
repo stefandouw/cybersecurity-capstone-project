@@ -1,0 +1,14 @@
+<div class="content-container">
+  <h1>Register</h1>
+  <p [textContent]="registrationResult"></p>
+  <div class="input-container">
+    <input #usernameInput type="text"><p>Username</p>
+  </div>
+  <div class="input-container">
+    <input #passwordInput type="password"><p>Password</p>
+  </div>
+  <div class="input-container">
+    <input #secretQuestionInput type="password"><p>Your pet's name</p>
+  </div>
+  <button (click)="validateRegistration(usernameInput.value, passwordInput.value, secretQuestionInput.value)">Register</button>
+</div>
